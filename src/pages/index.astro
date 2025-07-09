@@ -1,9 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro'
+
+import IconSvg from '../img/icon.svg'
 ---
 
 <Layout>
-	<h1 class="text-4xl font-bold text-rose-500 tracking-tight">
-		PaynBits w/ Layout
-	</h1>
+	<section class="w-5xl mx-auto p-16 flex flex-col items-center justify-center gap-4">
+
+		<img src={IconSvg.src} class="size-20" />
+
+		<h1 class="text-6xl font-light italic text-sky-500 tracking-wide">
+			PaynBits
+		</h1>
+
+		<h3 class="text-slate-500 italic">
+			brought to you by 0xShomari
+		</h3>
+
+	</section>
 </Layout>
