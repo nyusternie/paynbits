@@ -12,7 +12,7 @@
     "imageUrl": "https://paynbits.app/image.png",
     "buttonTitle": "Discover Bankless Living",
     "splashImageUrl": "https://paynbits.app/splash.png",
-    "splashBackgroundColor": "#883388",
+    "splashBackgroundColor": "#3c859e",
     "webhookUrl": "https://webhook.paynbits.app",
     "subtitle": "Bankless Life Concierge",
     "description": "Discover places to spend your crypto IRL using Bitrefill gift cards.",

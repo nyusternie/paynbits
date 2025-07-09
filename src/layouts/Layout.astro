@@ -1,5 +1,22 @@
 ---
+/* Import styles. */
 import '../styles/global.css'
+
+/* Define Mini App parameters. */
+const miniapp = {
+    version: '1',
+    imageUrl: 'https://paynbits.app/poster.webp',
+    button: {
+        title: 'Discover Bankless Living',
+        action: {
+            type: 'launch_miniapp',
+            url: 'https://paynbits.app',
+            name:'PaynBits',
+            splashImageUrl: 'https://paynbits.app/splash.png',
+            splashBackgroundColor:'#3c859e'
+        }
+    }
+}
 ---
 
 <html lang="en">
@@ -8,7 +25,13 @@ import '../styles/global.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>PaynBits | IRL Crypto Concierge</title>
+
+        <title>PaynBits | Bankless Life Concierge</title>
+
+        <!-- Farcaster Mini App content -->
+        <meta name="fc:miniapp" content={JSON.stringify(miniapp)} />
+        <!-- Farcaster (Frame) backward compatibility -->
+        <meta name="fc:frame" content={JSON.stringify(miniapp)} />
 	</head>
 	<body>
 		<slot />
