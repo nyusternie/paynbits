@@ -1,4 +1,9 @@
 {
+  "accountAssociation": {
+    "header": "eyJmaWQiOjg3MDU5NCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweEM4MDEzQThDMDk3NzRlYjJhMDA4RmRDYmVEQjVmNjQwZDFkYmVjMDAifQ",
+    "payload": "eyJkb21haW4iOiJwYXluYml0YS5hcHAifQ",
+    "signature": "MHgzZTNmNTIwN2IwNWU4ZjFlYzM0MjBmNjAzMDYwN2M4ZGRkODFkYmVmZjFkZDk3ODg3ZTVhZDE2NTkxZjJiNTI1NjUzMjQ1NGQ5ZjU4NzY5MmI0ZDUyZDVjMmI4ZjllYjZjMmM0NTRhMjVkNWQxMWUxMmFlZDlkMDgzZTZhZTUxMDFj"
+  },
   "miniapp": {
     "version": "1",
     "name": "PaynBits",
