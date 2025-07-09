@@ -11,9 +11,13 @@
   "dependencies": {
     "@astrojs/vue": "5.1.0",
     "@farcaster/miniapp-sdk": "0.1.6",
+    "@heroicons/vue": "2.2.0",
     "@tailwindcss/vite": "4.1.11",
     "astro": "5.11.0",
+    "moment": "2.30.1",
+    "numeral": "2.0.6",
     "tailwindcss": "4.1.11",
+    "uuid": "11.1.0",
     "vue": "3.5.17"
   }
 }
