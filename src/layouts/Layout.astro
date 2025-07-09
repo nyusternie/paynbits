@@ -32,10 +32,16 @@ const miniapp = {
         <meta name="fc:miniapp" content={JSON.stringify(miniapp)} />
         <!-- Farcaster (Frame) backward compatibility -->
         <meta name="fc:frame" content={JSON.stringify(miniapp)} />
+
+        <!-- Mapbox styles -->
+        <link href='https://api.mapbox.com/mapbox-gl-js/v3.13.0/mapbox-gl.css' rel='stylesheet' />
 	</head>
 	<body>
 		<slot />
         <!-- 100% privacy-first analytics -->
         <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+        <!-- Mapbox scripts -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v3.13.0/mapbox-gl.js'></script>
 	</body>
 </html>

@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
+
+import MapView from '../components/MapView.vue'
+---
+
+<Layout>
+	<main class="h-screen flex flex-col justify-between gap-0">
+		<!-- Application Header -->
+		<Header client:load />
+
+		<!-- Application Map Area -->
+		<MapView client:load />
+
+		<!-- Application Footer -->
+		<Footer client:load />
+	</main>
+</Layout>
+
+<script>
+console.log('PaynBits is starting up...')
+
+/* Import module.s */
+import { sdk } from '@farcaster/miniapp-sdk'
+
+/* Prepare UI for interactions. */
+await sdk.actions.ready()
+
+console.log('PaynBits has been initialized!')
+</script>
