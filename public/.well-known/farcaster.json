@@ -1,0 +1,26 @@
+{
+  "miniapp": {
+    "version": "1",
+    "name": "PaynBits",
+    "iconUrl": "https://paynbits.app/icon.png",
+    "homeUrl": "https://paynbits.app",
+    "imageUrl": "https://paynbits.app/image.png",
+    "buttonTitle": "Discover Bankless Living",
+    "splashImageUrl": "https://paynbits.app/splash.png",
+    "splashBackgroundColor": "#883388",
+    "webhookUrl": "https://webhook.paynbits.app",
+    "subtitle": "Bankless Life Concierge",
+    "description": "Discover places to spend your crypto IRL using Bitrefill gift cards.",
+    "primaryCategory": "shopping",
+    "tags": [
+      "shop",
+      "topup",
+      "giftcard"
+    ],
+    "tagline": "Bankless Life Concierge",
+    "ogTitle": "PaynBits",
+    "ogDescription": "Discover places to spend your crypto IRL using Bitrefill gift cards.",
+    "heroImageUrl": "https://paynbits.app/poster.jpg",
+    "ogImageUrl": "https://paynbits.app/poster.jpg"
+  }
+}
