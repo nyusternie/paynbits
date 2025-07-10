@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 
-import MapView from '../components/MapView.vue'
+import ProfileView from '../components/ProfileView.vue'
 ---
 
 <Layout>
@@ -12,8 +12,8 @@ import MapView from '../components/MapView.vue'
 		<!-- Application Header -->
 		<Header client:load />
 
-		<!-- Application Map Area -->
-		<MapView client:load />
+		<!-- Application Profile -->
+		<ProfileView client:load />
 
 		<!-- Application Footer -->
 		<Footer client:load />
@@ -21,7 +21,7 @@ import MapView from '../components/MapView.vue'
 </Layout>
 
 <script>
-console.log('PaynBits MAP is starting up...')
+console.log('PaynBits Profile is starting up...')
 
 /* Import module.s */
 import { sdk } from '@farcaster/miniapp-sdk'
@@ -29,5 +29,5 @@ import { sdk } from '@farcaster/miniapp-sdk'
 /* Prepare UI for interactions. */
 await sdk.actions.ready()
 
-console.log('PaynBits MAP has been initialized!')
+console.log('PaynBits Profile has been initialized!')
 </script>

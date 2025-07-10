@@ -1,10 +1,10 @@
 <template>
     <header class="w-full h-[60px] p-2 flex flex-row gap-3 justify-between bg-slate-900 overflow-hidden">
-        <a href="/roadmap" class="w-full h-full flex justify-center items-center border border-amber-300/70 rounded-lg">
+        <div class="w-full h-full flex justify-center items-center border border-amber-300/70 rounded-lg">
             <h1 class="inline-flex items-center gap-2 text-amber-300 font-bold text-2xl tracking-widest">
                 PaynBits
             </h1>
-        </a>
+        </div>
 
         <a href="/notif">
             <svg class="h-full p-2 bg-stone-300 text-stone-700 font-bold text-lg rounded-full tracking-wider hover:text-stone-200 hover:bg-stone-700" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
