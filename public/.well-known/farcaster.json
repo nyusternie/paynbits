@@ -10,11 +10,11 @@
     "iconUrl": "https://paynbits.app/icon.png",
     "homeUrl": "https://paynbits.app",
     "imageUrl": "https://paynbits.app/image.png",
-    "buttonTitle": "Discover My Bankless Community",
+    "buttonTitle": "Explore Bankless Shopping",
     "splashImageUrl": "https://paynbits.app/splash.png",
     "splashBackgroundColor": "#3c859e",
     "webhookUrl": "https://webhook.paynbits.app",
-    "subtitle": "Discover My Bankless Community",
+    "subtitle": "Explore Bankless Shopping",
     "description": "Discover places to spend your crypto IRL using Bitrefill gift cards.",
     "primaryCategory": "shopping",
     "tags": [
@@ -22,7 +22,7 @@
       "topup",
       "giftcard"
     ],
-    "tagline": "Discover My Bankless Community",
+    "tagline": "Explore Bankless Shopping",
     "ogTitle": "PaynBits",
     "ogDescription": "Discover places to spend your crypto IRL using Bitrefill gift cards.",
     "heroImageUrl": "https://paynbits.app/poster.webp",
