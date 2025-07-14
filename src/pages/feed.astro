@@ -5,6 +5,7 @@ import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 
 import ProfileView from '../components/ProfileView.vue'
+import SocialView from '../components/SocialView.vue'
 ---
 
 <Layout>
@@ -16,6 +17,9 @@ import ProfileView from '../components/ProfileView.vue'
 
 			<!-- Application Profile -->
 			<ProfileView client:load />
+
+			<!-- Social Details -->
+			<SocialView client:load />
 
 		</section>
 
