@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 
-import Chat from '../components/Chat.vue'
+import ChatView from '../components/ChatView.vue'
 
 import IconSvg from '../img/icon.svg'
 ---
@@ -29,7 +29,7 @@ import IconSvg from '../img/icon.svg'
 			</div>
 
 			<div class="my-3 p-3 bg-slate-100 border-2 border-stone-300 rounded-2xl shadow">
-				<Chat />
+				<ChatView client:load />
 			</div>
 
 		</section>
