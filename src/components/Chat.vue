@@ -1,7 +1,12 @@
 <template>
 
     <div class="my-6 flex gap-x-3">
-        <img :src="pfpUrl" alt="" class="size-6 flex-none rounded-full bg-gray-50" />
+        <img
+            :src="pfpUrl"
+            alt=""
+            class="size-8 flex-none rounded-full bg-gray-50"
+        />
+
         <form action="#" class="relative flex-auto">
             <div class="overflow-hidden rounded-lg pb-12 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                 <label for="comment" class="sr-only">Add your comment</label>
@@ -9,8 +14,8 @@
                     rows="2"
                     name="comment"
                     id="comment"
-                    class="block w-full resize-none bg-transparent px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
-                    placeholder="What can we shop for next?"
+                    class="block w-full resize-none bg-transparent px-3 py-1.5 text-base text-slate-900 placeholder:text-gray-400 focus:outline focus:outline-0"
+                    placeholder="What shall we shop for next?"
                 />
             </div>
 
@@ -19,7 +24,7 @@
 
 
                 </div>
-                <button type="submit" class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                <button type="submit" class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-slate-600 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                     Make Request
                 </button>
             </div>
@@ -35,7 +40,7 @@
                 <img :src="activityItem.person.imageUrl" alt="" class="relative mt-3 size-6 flex-none rounded-full bg-gray-50" />
                 <div class="flex-auto rounded-md p-3 ring-1 ring-inset ring-gray-200">
                     <div class="flex justify-between gap-x-4">
-                        <div class="py-0.5 text-xs/5 text-gray-500"><span class="font-medium text-gray-900">{{ activityItem.person.name }}</span> commented</div>
+                        <div class="py-0.5 text-xs/5 text-gray-500"><span class="font-medium text-slate-900">{{ activityItem.person.name }}</span> commented</div>
                         <time :datetime="activityItem.dateTime" class="flex-none py-0.5 text-xs/5 text-gray-500">{{ activityItem.date }}</time>
                     </div>
                     <p class="text-sm/6 text-gray-500">{{ activityItem.comment }}</p>
@@ -46,7 +51,7 @@
                     <CheckCircleIcon v-if="activityItem.type === 'paid'" class="size-6 text-indigo-600" aria-hidden="true" />
                     <div v-else class="size-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300" />
                 </div>
-                <p class="flex-auto py-0.5 text-xs/5 text-gray-500"><span class="font-medium text-gray-900">{{ activityItem.person.name }}</span> {{ activityItem.type }} the invoice.</p>
+                <p class="flex-auto py-0.5 text-xs/5 text-gray-500"><span class="font-medium text-slate-900">{{ activityItem.person.name }}</span> {{ activityItem.type }} the invoice.</p>
                 <time :datetime="activityItem.dateTime" class="flex-none py-0.5 text-xs/5 text-gray-500">{{ activityItem.date }}</time>
             </template>
         </li>
