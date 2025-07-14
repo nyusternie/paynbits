@@ -158,7 +158,7 @@
             name: "Tom Cook",
             email: "tom.cook@example.com",
             href: "#",
-            imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+            imageUrl: "https://wrpcd.net/cdn-cgi/imagedelivery/BXluQx4ige9GuW0Ia56BHw/57f8600f-2e51-4549-8cc4-f80e4c681800/anim=false,fit=contain,f=auto,w=336",
         },
         {
             name: "Whitney Francis",
