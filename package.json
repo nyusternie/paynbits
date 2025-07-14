@@ -1,7 +1,7 @@
 {
   "name": "paynbits.app",
   "type": "module",
-  "version": "25.7.9",
+  "version": "25.7.14",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/vue": "5.1.0",
     "@farcaster/miniapp-sdk": "0.1.6",
+    "@headlessui/vue": "1.7.23",
     "@heroicons/vue": "2.2.0",
     "@tailwindcss/vite": "4.1.11",
     "astro": "5.11.0",
