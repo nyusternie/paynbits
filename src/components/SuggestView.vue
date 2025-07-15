@@ -1,10 +1,6 @@
 <template>
     <div class="bg-white">
-        <!-- Background color split screen for large screens -->
-        <div class="fixed left-0 top-0 hidden h-full w-1/2 bg-white lg:block" aria-hidden="true" />
-        <div class="fixed right-0 top-0 hidden h-full w-1/2 bg-sky-900 lg:block" aria-hidden="true" />
-
-        <div class="relative mx-auto grid max-w-7xl grid-cols-1 gap-x-16 lg:grid-cols-2 lg:px-8 lg:pt-16">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-16">
             <h1 class="sr-only">Concierge Recommendations</h1>
 
             <section aria-labelledby="summary-heading" class="bg-stone-900 py-12 text-sky-300 rounded-xl">
