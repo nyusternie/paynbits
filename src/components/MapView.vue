@@ -57,25 +57,46 @@ const initMap = (_latitude, _longitude) => {
     // TODO Set as ENV VAR.
     mapboxgl.accessToken = 'pk.eyJ1IjoiaG91c2VvZnNkb3QiLCJhIjoiY21kaGkxcmtxMDIxMjJscTBoMzl5MWh3cCJ9.y1NqKJHxhdwKe65ClzWRMw'
 
-    /* Initialize map. */
-    const map = new mapboxgl.Map({
+    /* Define map config. */
+    const config = {
         container: mapContainer.value ?? '',
         // style: 'mapbox://styles/mapbox/streets-v12',
         style: 'mapbox://styles/mapbox/standard',
         center: [_longitude, _latitude],
         zoom: 13
-    })
+    }
+
+    /* Initialize map object. */
+    const map = new mapboxgl.Map(config)
+
+    /* Add full screen control. */
+    map.addControl(new mapboxgl.FullscreenControl())
+
+    const showCompass = true
+    const showZoom = true
+    const visualizePitch = false
+
+    /* Add navigation control. */
+    map.addControl(
+        new mapboxgl.NavigationControl({
+            showCompass, showZoom, visualizePitch }))
+
+    const enableHighAccuracy = true
+    const positionOptions = { enableHighAccuracy }
+    const trackUserLocation = true
+    const showUserHeading = true
 
     /* Add (geolocate) control. */
     map.addControl(
         new mapboxgl.GeolocateControl({
-            positionOptions: {
-                enableHighAccuracy: true,
-            },
-            trackUserLocation: true,
-            showUserHeading: true,
-        })
-    )
+            positionOptions,
+            trackUserLocation,
+            showUserHeading }))
+
+    // Add a default marker at specific coordinates
+    const marker = new mapboxgl.Marker()
+        .setLngLat([_longitude, _latitude])
+        .addTo(map)
 }
 
 onMounted(() => {
