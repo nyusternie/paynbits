@@ -93,10 +93,72 @@ const initMap = (_latitude, _longitude) => {
             trackUserLocation,
             showUserHeading }))
 
-    // Add a default marker at specific coordinates
-    const marker = new mapboxgl.Marker()
-        .setLngLat([_longitude, _latitude])
-        .addTo(map)
+    // // Add a default marker at specific coordinates
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat([_longitude, _latitude])
+    //     .addTo(map)
+
+    map.on('load', () => {
+        map.addSource('listings', {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features: [
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description: '<strong>Make it Mount Pleasant</strong><p>Handmade and vintage market.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [_longitude, _latitude]
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description: '<strong>Altenrative for testing ONL!</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [_longitude+0.01, _latitude+0.01]
+                        }
+                    }
+                ]
+            }
+        })
+
+        map.addLayer({
+            id: 'listings',
+            type: 'circle',
+            source: 'listings',
+            paint: {
+                'circle-color': '#fc00e4',
+                'circle-radius': 10,
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#ffffff'
+            }
+        })
+
+        // Show popup on click
+        map.on('click', 'listings', (e) => {
+            const coordinates = e.features![0].geometry.coordinates.slice()
+            const description = e.features![0].properties!.description
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map)
+        })
+
+        // Change cursor to pointer on hover
+        map.on('mouseenter', 'listings', () => {
+            map.getCanvas().style.cursor = 'pointer'
+        })
+        map.on('mouseleave', 'listings', () => {
+            map.getCanvas().style.cursor = ''
+        })
+    })
 }
 
 onMounted(() => {
