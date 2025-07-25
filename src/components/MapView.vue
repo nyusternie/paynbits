@@ -52,6 +52,73 @@ const requestLocation = () => {
     })
 }
 
+/**
+ * Side Panel Menu Button
+ *
+ * Used to toggle the sliding side panel.
+ */
+class SidePanelMenuBtn {
+    onAdd(_map) {
+        /* Set map. */
+        this._map = _map
+
+        /* Set div container. */
+        this._container = document.createElement('div')
+
+        /* Add control class. */
+        // NOTE: Required for events.
+        this._container.className = 'mapboxgl-ctrl'
+
+        // this._container.textContent = 'Click me!'
+        // this._container.onclick = () => {
+        //     alert('Button clicked!')
+        // }
+        // return this._container
+
+        const img = document.createElement('img')
+        img.src = 'https://paynbits.app/menu-solid.png'
+        this._container.appendChild(img)
+
+        /* Add Tailwind styling. */
+        this._container.classList.add('w-12')
+        this._container.classList.add('px-2')
+        this._container.classList.add('py-2')
+        this._container.classList.add('border-2')
+        this._container.classList.add('border-cyan-800')
+        this._container.classList.add('bg-cyan-600')
+        this._container.classList.add('text-xl')
+        // this._container.classList.add('text-pink-500')
+        this._container.classList.add('rounded-xl')
+        this._container.classList.add('shadow-lg')
+        this._container.classList.add('cursor-pointer')
+
+        this._container.onclick = () => {
+            alert('Button clicked!')
+        }
+
+        this._container.addEventListener('mouseover', () => {
+            this._container.classList.remove('bg-pink-200')
+            this._container.classList.add('bg-yellow-500')
+
+            this._container.classList.add('font-bold')
+        })
+
+        this._container.addEventListener('mouseout', () => {
+            this._container.classList.remove('bg-yellow-500')
+            this._container.classList.add('bg-pink-200')
+
+            this._container.classList.remove('font-bold')
+        })
+
+        return this._container
+    }
+
+    onRemove(){
+        this._container.parentNode.removeChild(this._container)
+        this._map = undefined
+    }
+}
+
 const initMap = (_latitude, _longitude) => {
     /* (Public) Access Token */
     // TODO Set as ENV VAR.
@@ -70,7 +137,7 @@ const initMap = (_latitude, _longitude) => {
     const map = new mapboxgl.Map(config)
 
     /* Add full screen control. */
-    map.addControl(new mapboxgl.FullscreenControl())
+    map.addControl(new mapboxgl.FullscreenControl(), 'bottom-right')
 
     const showCompass = true
     const showZoom = true
@@ -79,7 +146,7 @@ const initMap = (_latitude, _longitude) => {
     /* Add navigation control. */
     map.addControl(
         new mapboxgl.NavigationControl({
-            showCompass, showZoom, visualizePitch }))
+            showCompass, showZoom, visualizePitch }), 'bottom-right')
 
     const enableHighAccuracy = true
     const positionOptions = { enableHighAccuracy }
@@ -91,12 +158,15 @@ const initMap = (_latitude, _longitude) => {
         new mapboxgl.GeolocateControl({
             positionOptions,
             trackUserLocation,
-            showUserHeading }))
+            showUserHeading }), 'bottom-right')
 
     // // Add a default marker at specific coordinates
     // const marker = new mapboxgl.Marker()
     //     .setLngLat([_longitude, _latitude])
     //     .addTo(map)
+
+    /* Add side panel menu button. */
+    map.addControl(new SidePanelMenuBtn(), 'top-right')
 
     map.on('load', () => {
         map.addSource('listings', {
